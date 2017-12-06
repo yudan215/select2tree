@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link href="css/select2.min.css" rel="stylesheet" />
+	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/select2-bootstrap-theme/0.1.0-beta.6/select2-bootstrap.min.css" rel="stylesheet" />
+		<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="js/select2.min.js"></script>
+	<script src="js/select2tree.js"></script>
+</head>
+<body>
+	<select class="js-example-placeholder-single js-states form-control">
+  <option></option>
+			<option value="1" isparent='true'>1</option>
+			<option value="12" parent="1">12</option>
+			
+			<option value="13" parent="1" isparent='true'>13</option>
+			<option value="11" parent="1">11</option>
+			<option value="131" parent="13">131</option>
+			<option value="132" parent="13">132</option>
+			<option value="2" isparent='true'>2</option>
+			<option value="21" parent="2">21</option>
+			<option value="32" parent="3">32</option>
+			<option value="33" parent="3">33</option>
+			<option value="3" isparent='true'>3</option>
+			<option value="31" parent="3">31</option>
+			<option value="22" parent="2">22</option>
+			<option value="133" parent="13">133</option>
+			<option value="23" parent="2">23</option>
+</select>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+	    $(".js-example-placeholder-single").select2tree({
+		    placeholder: "请选择",
+		    minimumResultsForSearch: Infinity
+		});
+	});
+</script>
+</body>
+</html>
